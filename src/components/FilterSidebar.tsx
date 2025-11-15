@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { X } from 'lucide-react';
 import { categories, difficultyLevels } from '../data/courses';
 import { motion, AnimatePresence } from 'framer-motion';

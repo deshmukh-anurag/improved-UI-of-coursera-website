@@ -51,7 +51,7 @@ const CourseDetails = () => {
                   {course.category}
                 </span>
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">{course.title}</h1>
-                <p className="text-xl text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                <p className="text-base text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
                   {course.description}
                 </p>
 
@@ -144,24 +144,48 @@ const CourseDetails = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2 space-y-12">
               {/* What You'll Learn */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl font-bold mb-6">What you'll learn</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {course.syllabus.map((item, index) => (
-                    <div
-                      key={index}
-                      className="flex items-start space-x-3 p-4 bg-white dark:bg-card-dark rounded-xl border border-gray-100 dark:border-gray-800"
-                    >
-                      <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700 dark:text-gray-300">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
+              {course.whatYoullLearn && course.whatYoullLearn.length > 0 && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                >
+                  <h2 className="text-3xl font-bold mb-6">What you'll learn</h2>
+                  <div className="space-y-3">
+                    {course.whatYoullLearn.map((item, index) => (
+                      <div
+                        key={index}
+                        className="flex items-start space-x-3"
+                      >
+                        <Check className="w-5 h-5 text-black dark:text-white flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700 dark:text-gray-300">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+
+              {/* Skills You'll Gain */}
+              {course.skillsYoullGain && course.skillsYoullGain.length > 0 && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 }}
+                >
+                  <h2 className="text-3xl font-bold mb-6">Skills you'll gain</h2>
+                  <div className="flex flex-wrap gap-3">
+                    {course.skillsYoullGain.map((skill, index) => (
+                      <span
+                        key={index}
+                        className="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-full text-sm font-medium"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
 
               {/* Syllabus */}
               <motion.div
