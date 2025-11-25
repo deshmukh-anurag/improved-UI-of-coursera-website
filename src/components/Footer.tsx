@@ -177,8 +177,8 @@ const Footer = () => {
               <span>English</span>
             </button>
             <button className="flex items-center space-x-2 px-4 py-2 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors">
-              <span>💲</span>
-              <span>USD</span>
+              <span>₹</span>
+              <span>INR</span>
             </button>
           </div>
         </div>

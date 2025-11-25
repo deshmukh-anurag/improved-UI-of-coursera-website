@@ -1,41 +1,13 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, BookOpen, Users, Award, TrendingUp, Play, Clock, CheckCircle, User } from 'lucide-react';
+import { ArrowRight, BookOpen,TrendingUp, Play, Clock, Flame } from 'lucide-react';
 import { courses, categories } from '../data/courses';
 import CourseCard from '../components/CourseCard';
 import CircularProgress from '../components/CircularProgress';
-import { Fire } from 'lucide-react';
 
 const Courses = () => {
     const [selectedCategory, setSelectedCategory] = useState('All');
-
-    // Mock user data - showing logged in user
-    const user = {
-        name: 'Rahul Yadav',
-        email: 'cs23b1059@iiitr.ac.in',
-        avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
-        enrolledCourses: [
-            {
-                ...courses[0], // Complete Web Development Bootcamp
-                progress: 65,
-                lastAccessed: '2 hours ago',
-                nextLesson: 'React Components and State'
-            },
-            {
-                ...courses[1], // Data Science and Machine Learning
-                progress: 30,
-                lastAccessed: '1 day ago',
-                nextLesson: 'Introduction to Pandas'
-            },
-            {
-                ...courses[2], // AWS Cloud Practitioner
-                progress: 80,
-                lastAccessed: '3 hours ago',
-                nextLesson: 'Final Exam Preparation'
-            }
-        ]
-    };
 
     // Mock user enrolled courses
     const userEnrolledCourses = [
@@ -74,11 +46,6 @@ const Courses = () => {
     const displayedCourses = filteredCourses.slice(0, 4);
     const hasMoreCourses = filteredCourses.length > 4;
 
-    const featuredCourses = courses.slice(0, 8);
-    const totalStudents = courses.reduce(
-        (sum, course) => sum + (course.students || 0),
-        0
-    );
 
     return (
         <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-8">
@@ -127,7 +94,7 @@ const Courses = () => {
                                 <p className="text-sm text-gray-600 dark:text-gray-400">Streak</p>
                                 <p className="text-xl font-bold text-gray-900 dark:text-white">12</p>
                             </div>
-                            <Fire className="w-6 h-6 text-orange-500" />
+                            <Flame className="w-6 h-6 text-orange-500" />
                         </div>
                     </div>
                 </motion.div>

@@ -1,19 +1,14 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
     BookOpen,
     Clock,
     Award,
-    TrendingUp,
-    Calendar,
-    Target,
     Zap,
     Play,
-    ChevronRight,
     BarChart3,
     Trophy,
-    Fire
+    Flame // Changed from Fire to Flame
 } from 'lucide-react';
 import CircularProgress from '../components/CircularProgress';
 import StreakCalendar from '../components/StreakCalendar';
@@ -101,7 +96,7 @@ const Dashboard = () => {
                     </div>
                     <div className="flex items-center space-x-2">
                         <div className="flex items-center space-x-1 bg-orange-100 dark:bg-orange-900 px-3 py-2 rounded-lg">
-                            <Fire className="w-5 h-5 text-orange-500" />
+                            <Flame className="w-5 h-5 text-orange-500" />
                             <span className="font-bold text-orange-700 dark:text-orange-300">
                                 {user.currentStreak} day streak
                             </span>
@@ -280,7 +275,7 @@ const Dashboard = () => {
                             <div className="flex items-center justify-between mb-6">
                                 <h3 className="text-lg font-bold text-gray-900 dark:text-white">Learning Streak</h3>
                                 <div className="flex items-center space-x-1 text-orange-500">
-                                    <Fire className="w-5 h-5" />
+                                    <Flame className="w-5 h-5" />
                                     <span className="font-bold">{user.currentStreak}</span>
                                 </div>
                             </div>

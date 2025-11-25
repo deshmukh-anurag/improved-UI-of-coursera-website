@@ -82,7 +82,7 @@ const CourseCard = ({ course, index = 0 }: CourseCardProps) => {
               </div>
               {course.price && (
                 <span className="font-bold text-lg text-primary-light dark:text-primary-dark">
-                  ${course.price} {/* Changed back from ₹ to $ and removed Indian number formatting */}
+                  ₹{course.price}
                 </span>
               )}
             </div>

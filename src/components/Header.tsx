@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X, Search, ChevronDown, Moon, Sun, User, ShoppingCart, Bell, Globe, BookOpen, Briefcase, GraduationCap, Award, TrendingUp, Video, FileText, BarChart3 } from 'lucide-react';
+import { Link, useLocation} from 'react-router-dom';
+import { Menu, X, Search, ChevronDown, Moon, Sun, User, ShoppingCart, Bell, Globe, BookOpen, Briefcase, GraduationCap, Award, TrendingUp, FileText, BarChart3, Settings, LogOut } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Header = () => {
@@ -9,11 +9,9 @@ const Header = () => {
     const [isDarkMode, setIsDarkMode] = useState(false);
     const [showExploreDropdown, setShowExploreDropdown] = useState(false);
     const [showDegreesDropdown, setShowDegreesDropdown] = useState(false);
-    const [showUserDropdown, setShowUserDropdown] = useState(false);
     const [showNotifications, setShowNotifications] = useState(false);
     const [showMyLearning, setShowMyLearning] = useState(false);
     const location = useLocation();
-    const navigate = useNavigate();
 
     // Mock user data - simulating logged in user
     const user = {
@@ -59,7 +57,6 @@ const Header = () => {
 
     return (
         <header className="bg-white dark:bg-gray-900 shadow-lg sticky top-0 z-50">
-            <div className="container mx-auto px-4">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <Link to="/" className="flex items-center space-x-2 flex-shrink-0">
@@ -459,6 +456,7 @@ const Header = () => {
                                 <Link
                                     to="/signup"
                                     className="px-6 py-2 bg-primary-light hover:bg-primary-dark text-white font-semibold rounded-lg transition-colors shadow-md hover:shadow-lg"
+                                >
                                     Sign Up
                                 </Link>
                             </div>

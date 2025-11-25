@@ -53,7 +53,7 @@ export const courses: Course[] = [
       { title: 'Ethics in AI', hours: 1.0, description: 'Examine the ethical implications of AI development and deployment. Discuss bias in AI systems, privacy concerns, and algorithmic fairness. Learn about responsible AI practices, transparency, and accountability. Explore case studies of ethical dilemmas in AI and understand frameworks for making ethical decisions in AI projects.' },
       { title: 'Real-world AI projects', hours: 1.0, description: 'Apply your knowledge by building complete AI projects from scratch. Work on practical applications such as image classifiers, recommendation systems, or chatbots. Learn best practices for project planning, data collection, model training, and deployment. Get guidance on presenting your AI projects and building a portfolio that showcases your skills.' }
     ],
-    price: 7397,
+    price: 3999,
     students: 15234
   },
   {
@@ -85,7 +85,7 @@ export const courses: Course[] = [
       { title: 'Design systems', hours: 1.0, description: 'Understand how to create and maintain design systems that ensure consistency across products. Learn about component libraries, style guides, and design tokens. Explore how design systems improve collaboration between designers and developers. Practice documenting design patterns and creating reusable components. Understand the role of design systems in scaling design operations.' },
       { title: 'Portfolio development', hours: 1.0, description: 'Learn how to showcase your design work effectively in a professional portfolio. Understand what makes a strong design portfolio and how to tell compelling stories about your projects. Get guidance on selecting and presenting your best work. Learn how to write case studies that demonstrate your design process and problem-solving skills. Discover strategies for getting your portfolio noticed by employers and clients.' }
     ],
-    price: 6557,
+    price: 1999,
     students: 9876
   },
   {
@@ -117,7 +117,7 @@ export const courses: Course[] = [
       { title: 'Crisis management', hours: 1.5, description: 'Develop skills for managing crises and navigating challenging situations. Learn how to identify early warning signs and prepare crisis response plans. Understand communication strategies for managing stakeholder relationships during crises. Explore case studies of successful crisis management and learn from failures. Practice decision-making under pressure and maintaining organizational resilience.' },
       { title: 'Growth strategies', hours: 1.5, description: 'Explore strategies for driving sustainable organizational growth including market penetration, product development, market development, and diversification. Learn about scaling operations, entering new markets, and strategic partnerships. Understand how to balance growth with operational excellence. Discover frameworks for evaluating growth opportunities and managing growth-related risks.' }
     ],
-    price: 8217,
+    price: 2999,
     students: 11245
   },
   {
@@ -149,7 +149,7 @@ export const courses: Course[] = [
       { title: 'Microservices design', hours: 1.5, description: 'Understand microservices architecture patterns and when to use them. Learn about service decomposition, API design, and inter-service communication. Explore patterns for data management, service discovery, and load balancing in microservices. Understand challenges like distributed transactions, eventual consistency, and service mesh. Practice designing and implementing microservices architectures.' },
       { title: 'Security best practices', hours: 1.5, description: 'Implement security best practices including authentication, authorization, and data encryption. Learn about common vulnerabilities like XSS, CSRF, SQL injection, and how to prevent them. Understand OAuth, JWT tokens, and secure session management. Explore content security policies, HTTPS, and secure headers. Learn about security auditing, penetration testing, and compliance requirements.' }
     ],
-    price: 9057,
+    price: 3999,
     students: 18765
   },
   {
@@ -181,7 +181,7 @@ export const courses: Course[] = [
       { title: 'Risk management', hours: 0.5, description: 'Understand different types of insurance including health, life, disability, and property insurance. Learn how to determine appropriate coverage levels and choose insurance policies. Understand the role of emergency funds in financial security. Learn about estate planning basics including wills, trusts, and beneficiary designations. Explore strategies for protecting your assets and managing financial risks.' },
       { title: 'Building generational wealth', hours: 0.5, description: 'Learn strategies for building and preserving wealth that can be passed to future generations. Understand estate planning, trusts, and wealth transfer strategies. Explore how to teach financial literacy to children and prepare them for financial success. Learn about charitable giving and legacy planning. Understand how to create a comprehensive wealth-building plan that spans generations.' }
     ],
-    price: 5737,
+    price: 4999,
     students: 8765
   },
   {
@@ -213,7 +213,7 @@ export const courses: Course[] = [
       { title: 'Work-life balance', hours: 0.5, description: 'Learn how to create sustainable work-life balance that prevents burnout and promotes well-being. Understand how to set boundaries and protect your personal time. Explore strategies for managing work stress and maintaining energy. Learn how to prioritize self-care and maintain relationships while pursuing professional goals. Understand how to create a lifestyle that supports both career success and personal fulfillment.' },
       { title: 'Creating lasting change', hours: 0.5, description: 'Master strategies for making lasting changes in your life and maintaining new behaviors long-term. Learn about change management principles and how to navigate the stages of change. Understand how to create accountability systems and support networks. Explore techniques for maintaining motivation and overcoming setbacks. Learn how to build a personal development plan that leads to continuous growth and improvement.' }
     ],
-    price: 4897,
+    price: 6999,
     students: 12456
   },
   {
@@ -245,7 +245,7 @@ export const courses: Course[] = [
       { title: 'Predictive analytics', hours: 1.5, description: 'Learn how to build predictive models that forecast future outcomes. Understand time series forecasting, classification, and regression techniques. Master techniques for feature engineering and model optimization. Learn how to evaluate model performance and handle imbalanced datasets. Practice building end-to-end predictive analytics pipelines from data preparation to model deployment.' },
       { title: 'Capstone project', hours: 0.5, description: 'Apply all your data science skills to solve a real-world problem in a comprehensive capstone project. Work through the complete data science workflow from problem definition to solution deployment. Create a portfolio piece that demonstrates your skills to potential employers. Receive guidance on project selection, execution, and presentation. Learn how to document your work and communicate your findings effectively.' }
     ],
-    price: 7807,
+    price: 7999,
     students: 9876
   },
   {
@@ -277,7 +277,7 @@ export const courses: Course[] = [
       { title: 'Conversion optimization', hours: 1.0, description: 'Learn how to optimize websites and landing pages to increase conversions. Understand conversion rate optimization (CRO) principles and techniques. Master A/B testing and multivariate testing methodologies. Learn about user experience (UX) principles that drive conversions. Explore techniques for reducing friction, building trust, and creating compelling offers that convert visitors into customers.' },
       { title: 'Marketing automation', hours: 0.5, description: 'Introduction to marketing automation platforms and how they can streamline your marketing efforts. Learn about lead nurturing workflows, drip campaigns, and automated email sequences. Understand how to score leads and route them to sales teams. Explore how automation can personalize customer experiences at scale. Learn how to set up basic automation workflows that save time and improve results.' }
     ],
-    price: 6977,
+    price: 8999,
     students: 13456
   },
   {
@@ -307,7 +307,7 @@ export const courses: Course[] = [
       { title: 'AI Governance and Accountability', hours: 1.5, description: 'Develop frameworks for creating accountable AI systems and establishing ethical oversight within organizations.' },
       { title: 'The Future of AI and Society', hours: 1.5, description: 'Discuss long-term societal impacts of AI, including job displacement, superintelligence, and policy-making.' }
     ],
-    price: 8217,
+    price: 9499,
     students: 7843
   },
   {
@@ -337,7 +337,7 @@ export const courses: Course[] = [
       { title: 'Accessibility in Motion', hours: 1.5, description: 'Learn to design animations that are inclusive and accessible to all users.' },
       { title: 'Final Project: Interactive Prototype', hours: 1.5, description: 'Apply your skills to design and animate a complete interactive prototype for a mobile app.' }
     ],
-    price: 7397,
+    price: 8499,
     students: 10345
   },
   {
@@ -366,7 +366,7 @@ export const courses: Course[] = [
       { title: 'Using Databases with Python', hours: 4.0, description: 'Learn the basics of SQL and database design, and how to use a database with Python.' },
       { title: 'Capstone Project', hours: 4.0, description: 'Build a series of applications to retrieve, process, and visualize data.' }
     ],
-    price: 4077,
+    price: 3499,
     students: 250123
   },
   {
@@ -396,7 +396,7 @@ export const courses: Course[] = [
       { title: 'Alternative Investments', hours: 2.0, description: 'Explore investments beyond stocks and bonds, such as real estate, commodities, and crypto.' },
       { title: 'Risk Management Techniques', hours: 1.5, description: 'Learn to use derivatives and other tools to hedge portfolio risk.' }
     ],
-    price: 9877,
+    price: 2499,
     students: 11567
   },
   {
@@ -426,7 +426,7 @@ export const courses: Course[] = [
       { title: 'Visual Aids and Q&A', hours: 1.0, description: 'Design effective slides and learn strategies for handling audience questions.' },
       { title: 'Practice and Feedback', hours: 0.5, description: 'Record and review your speeches to identify areas for improvement.' }
     ],
-    price: 6557,
+    price: 1499,
     students: 19876
   }
 ];
