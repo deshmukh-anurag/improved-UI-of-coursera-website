@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Filter, X } from 'lucide-react';
 import CourseCard from '../components/CourseCard';
@@ -22,6 +22,7 @@ const CourseCatalog = () => {
   const [searchQuery, setSearchQuery] = useState(
     searchParams.get('search') || ''
   );
+  const navigate = useNavigate();
 
   const filteredCourses = useMemo(() => {
     return courses.filter((course) => {
@@ -46,6 +47,22 @@ const CourseCatalog = () => {
     if (searchQuery) params.set('search', searchQuery);
     setSearchParams(params);
   }, [selectedCategory, selectedLevel, minRating, searchQuery, setSearchParams]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    const handlePopState = () => {
+      if (window.location.pathname === '/courses') {
+        navigate('/', { replace: true });
+      }
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, [navigate]);
 
   const handleReset = () => {
     setSelectedCategory('All');

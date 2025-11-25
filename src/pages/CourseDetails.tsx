@@ -101,7 +101,7 @@ const CourseDetails = () => {
               <div className="bg-white dark:bg-card-dark rounded-2xl p-6 shadow-xl border border-gray-100 dark:border-gray-800">
                 {course.price && (
                   <div className="text-4xl font-bold mb-4">
-                    ${course.price}
+                    ₹{course.price}
                     <span className="text-lg text-gray-500 dark:text-gray-400 font-normal">
                       {' '}
                       one-time
@@ -214,7 +214,7 @@ const CourseDetails = () => {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div>
             {course.price && (
-              <div className="text-2xl font-bold">${course.price}</div>
+                <div className="text-2xl font-bold">₹{course.price}</div>
             )}
           </div>
           <motion.button

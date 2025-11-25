@@ -1,13 +1,14 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, BookOpen,TrendingUp, Play, Clock, Flame } from 'lucide-react';
+import { ArrowRight, BookOpen, TrendingUp, Play, Clock, Flame } from 'lucide-react';
 import { courses, categories } from '../data/courses';
 import CourseCard from '../components/CourseCard';
 import CircularProgress from '../components/CircularProgress';
 
 const Courses = () => {
     const [selectedCategory, setSelectedCategory] = useState('All');
+    const navigate = useNavigate();
 
     // Mock user enrolled courses
     const userEnrolledCourses = [
@@ -46,6 +47,22 @@ const Courses = () => {
     const displayedCourses = filteredCourses.slice(0, 4);
     const hasMoreCourses = filteredCourses.length > 4;
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    useEffect(() => {
+        const handlePopState = () => {
+            if (window.location.pathname === '/courses') {
+                // If still on /courses after back, force redirect to home
+                navigate('/', { replace: true });
+            }
+        };
+        window.addEventListener('popstate', handlePopState);
+        return () => {
+            window.removeEventListener('popstate', handlePopState);
+        };
+    }, [navigate]);
 
     return (
         <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-8">
@@ -175,8 +192,7 @@ const Courses = () => {
                             <motion.button
                                 key={category}
                                 initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, scale: 1 }}
                                 transition={{ delay: index * 0.05 }}
                                 onClick={() => setSelectedCategory(category)}
                                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === category
@@ -201,8 +217,8 @@ const Courses = () => {
                 {hasMoreCourses && (
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.3 }}
                         className="text-center"
                     >
                         <Link
